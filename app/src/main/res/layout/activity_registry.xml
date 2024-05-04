@@ -9,7 +9,7 @@
     tools:context=".Registry">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Subgreeting"
         android:layout_width="342dp"
         android:layout_height="44dp"
         android:layout_marginStart="22dp"
@@ -34,12 +34,12 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/Subgreeting"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/email"
         android:layout_width="360dp"
         android:layout_height="44dp"
         android:layout_marginStart="22dp"
@@ -53,16 +53,17 @@
         android:paddingLeft="10dp"
         android:paddingTop="3dp"
         android:selectAllOnFocus="false"
+        android:textColor="#000000"
         android:textColorHint="#80000000"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/Subgreeting" />
 
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/Password"
         android:layout_width="360dp"
         android:layout_height="44dp"
         android:layout_marginStart="22dp"
@@ -75,55 +76,56 @@
         android:paddingLeft="10dp"
         android:paddingTop="3dp"
         android:singleLine="true"
+        android:textColor="#000000"
         android:textColorHint="#80000000"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         tools:ignore="Autofill" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="40dp"
+        android:id="@+id/textMail"
+        android:layout_width="45dp"
         android:layout_height="16dp"
         android:layout_marginBottom="52dp"
         android:text="Почта"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="@+id/email"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintStart_toStartOf="@+id/email" />
 
     <ImageButton
-        android:id="@+id/button"
+        android:id="@+id/visionButton"
         android:layout_width="14dp"
         android:layout_height="14dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:background="@drawable/oko_button_selector"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword2"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
+        app:layout_constraintBottom_toBottomOf="@+id/Password"
+        app:layout_constraintEnd_toEndOf="@+id/Password"
         app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPassword2"
+        app:layout_constraintStart_toStartOf="@+id/Password"
+        app:layout_constraintTop_toTopOf="@+id/Password"
         app:layout_constraintVertical_bias="0.666"
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
         android:text="Пароль"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword2"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
+        app:layout_constraintBottom_toBottomOf="@+id/Password"
+        app:layout_constraintEnd_toEndOf="@+id/Password"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2" />
+        app:layout_constraintStart_toStartOf="@+id/Password" />
 
     <Button
-        android:id="@+id/myButton"
+        android:id="@+id/forgotPassword"
         android:layout_width="159dp"
         android:layout_height="37dp"
         android:layout_marginStart="224dp"
@@ -132,40 +134,42 @@
         android:text="Забыли пароль?"
         android:textColor="@color/purple"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
+        app:layout_constraintStart_toStartOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/deda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Запомнить меня"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
-        tools:layout_editor_absoluteX="52dp"
+        app:layout_constraintEnd_toStartOf="@+id/forgotPassword"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/enterButton"
         android:layout_width="342dp"
         android:layout_height="42dp"
         android:layout_marginBottom="52dp"
         android:background="@drawable/button_back"
-        android:backgroundTint="@color/grey"
+        android:backgroundTint="#A7A7A7"
 
 
-        android:text="Button"
+        android:text="Войти"
         android:textColor="@color/white"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/rememberCheck"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_marginTop="-2dp"
@@ -173,11 +177,11 @@
         android:background="@drawable/rounded_edittext"
         android:checked="false"
         android:text="CheckBox"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintEnd_toStartOf="@+id/deda"
+        app:layout_constraintTop_toTopOf="@+id/deda" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/createButton"
         android:layout_width="159dp"
         android:layout_height="37dp"
         android:layout_marginEnd="32dp"
@@ -185,12 +189,12 @@
         android:text="Создать"
         android:textColor="@color/purple"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="@+id/enterButton"
+        app:layout_constraintTop_toBottomOf="@+id/enterButton"
         tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/noAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
@@ -198,8 +202,8 @@
         android:text="У меня нет аккаунта!"
         android:textColor="@color/grey"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/enterButton"
+        app:layout_constraintTop_toBottomOf="@+id/enterButton"
         tools:ignore="MissingConstraints" />
 
 
