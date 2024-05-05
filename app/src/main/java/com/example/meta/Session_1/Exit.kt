@@ -1,6 +1,8 @@
 package com.example.meta.Session_1
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,12 +12,16 @@ import com.example.meta.R
 class Exit : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_exit)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val ext : Button = findViewById(R.id.enterButton)
+
+        ext.setOnClickListener{
+            exitLight()
         }
+    }
+    fun exitLight(){
+        val intent = Intent(this, Registry::class.java)
+        startActivity(intent)
     }
 }

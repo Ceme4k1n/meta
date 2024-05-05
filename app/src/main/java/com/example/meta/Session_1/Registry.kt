@@ -65,27 +65,15 @@ class Registry : AppCompatActivity() {
                 enterSandman()
             }
         }
-
-        enterButton.setOnClickListener {
-
-            if (email.text.isNotEmpty() && password.text.isNotEmpty()) {
-                enterSandman()
-
-            }
-        }
-
-
-
-
     }
 
 
     fun goToPassword(){
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, Forgot_Pass::class.java)
         startActivity(intent)
     }
     fun  goToCreate(){
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, Create_Acc::class.java)
         startActivity(intent)
     }
     fun enterSandman(){
