@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Session_1.Registry">
+    tools:context=".Session_1.Create_Acc">
+
 
     <TextView
         android:id="@+id/Subgreeting"
@@ -15,7 +16,7 @@
         android:layout_marginStart="13dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="22dp"
-        android:text="Заполните почту и пароль чтобы продолжить"
+        android:text="Завершите регистрацию чтобы начать"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +29,7 @@
         android:layout_width="220dp"
         android:layout_height="0dp"
         android:layout_marginTop="56dp"
-        android:text="Добро пожаловать"
+        android:text="Создать аккаунт"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -66,7 +67,7 @@
         android:layout_width="385dp"
         android:layout_height="42dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="22dp"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
@@ -83,11 +84,33 @@
         app:layout_constraintTop_toBottomOf="@+id/email"
         tools:ignore="Autofill" />
 
+    <EditText
+        android:id="@+id/repeatPassword"
+        android:layout_width="385dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="**********"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textColorHint="#80000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        tools:ignore="Autofill" />
+
     <TextView
         android:id="@+id/textMail"
         android:layout_width="45dp"
         android:layout_height="16dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="50dp"
         android:text="Почта"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/email"
@@ -99,8 +122,6 @@
         android:id="@+id/visionButton"
         android:layout_width="14dp"
         android:layout_height="14dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
         android:background="@drawable/oko_button_selector"
         app:layout_constraintBottom_toBottomOf="@+id/Password"
         app:layout_constraintEnd_toEndOf="@+id/Password"
@@ -109,11 +130,24 @@
         app:layout_constraintTop_toTopOf="@+id/Password"
         tools:ignore="ContentDescription" />
 
+
+    <ImageButton
+        android:id="@+id/visionButtonRepeat"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:background="@drawable/oko_button_selector"
+        app:layout_constraintBottom_toBottomOf="@+id/repeatPassword"
+        app:layout_constraintEnd_toEndOf="@+id/repeatPassword"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="@+id/repeatPassword"
+        app:layout_constraintTop_toTopOf="@+id/repeatPassword"
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="50dp"
         android:text="Пароль"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/Password"
@@ -121,31 +155,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/Password" />
 
-    <Button
-        android:id="@+id/forgotPassword"
-        android:layout_width="135dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="4dp"
-        android:background="@android:color/transparent"
-        android:text="Забыли пароль?"
-        android:textColor="@color/purple"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/Password"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
-        tools:ignore="MissingConstraints" />
-
     <TextView
-        android:id="@+id/deda"
-        android:layout_width="135dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="4dp"
-        android:text="Запомнить меня"
+        android:id="@+id/repeatpasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Повторите пароль"
         android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/Password"
-        app:layout_constraintTop_toBottomOf="@+id/Password"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="@+id/repeatPassword"
+        app:layout_constraintEnd_toEndOf="@+id/repeatPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/repeatPassword" />
+
 
     <Button
         android:id="@+id/enterButton"
@@ -154,9 +175,7 @@
         android:layout_marginBottom="52dp"
         android:background="@drawable/button_back"
         android:backgroundTint="#A7A7A7"
-
-
-        android:text="Войти"
+        android:text="Зарегистрироваться"
         android:textColor="@color/white"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -164,25 +183,14 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:visibility="visible" />
 
-    <CheckBox
-        android:id="@+id/rememberCheck"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="3dp"
-        android:background="@drawable/rounded_edittext"
-        android:checked="false"
-        android:text="CheckBox"
-        app:layout_constraintStart_toStartOf="@+id/Password"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
-
     <Button
         android:id="@+id/createButton"
         android:layout_width="65dp"
         android:layout_height="20dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="72dp"
         android:background="@android:color/transparent"
-        android:text="Создать"
+        android:text="Войти"
         android:textColor="@color/purple"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/enterButton"
@@ -190,12 +198,12 @@
         tools:ignore="HardcodedText,MissingConstraints" />
 
     <TextView
-        android:id="@+id/noAcc"
-        android:layout_width="140dp"
+        android:id="@+id/createAcc"
+        android:layout_width="170dp"
         android:layout_height="20dp"
-        android:layout_marginStart="62dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="8dp"
-        android:text="У меня нет аккаунта!"
+        android:text="У меня уже есть аккаунт!"
         android:textColor="@color/grey"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/enterButton"
