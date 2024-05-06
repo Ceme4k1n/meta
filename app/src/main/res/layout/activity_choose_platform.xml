@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Session_2.Choose_Platform">
+
+    <ImageView
+        android:id="@+id/imageAvatar_Profile"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="73dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/true_avatar_selector" />
+
+    <TextView
+        android:id="@+id/textFIO_Avatar"
+        android:layout_width="197dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="73dp"
+        android:text="Смирнов Александр Максимович"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/imageAvatar_Profile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/poloska"
+        android:layout_width="362dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFIO_Avatar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textHistory"
+        android:layout_width="72dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:text="История"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poloska" />
+
+    <TextView
+        android:id="@+id/textreadStatyi"
+        android:layout_width="142dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:text="Прочитанные статьи"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHistory"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textBlack_Spisok"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:text="Чёрный список"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHistory"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textSettings"
+        android:layout_width="103dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="149dp"
+        android:text="Найстройки"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poloska" />
+
+    <Button
+        android:id="@+id/button_profile_redact"
+        android:layout_width="172dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/transparent"
+        android:gravity="start|center_vertical"
+        android:text="Редактирование профиля"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSettings" />
+
+    <TextView
+        android:id="@+id/textPolyciConf"
+        android:layout_width="212dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:text="Политика конфиденциальности"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSettings"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textOffline_List"
+        android:layout_width="112dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="94dp"
+        android:text="Оффлайн чтение"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSettings"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textAbout_As"
+        android:layout_width="42dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="132dp"
+        android:text="О нас"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSettings"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/round_text_button"
+        android:text="Button"
+        android:textColor="#CA0000"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poloska" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

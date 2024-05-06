@@ -48,7 +48,6 @@
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:hint="***********@mail.com"
-
         android:inputType="textEmailAddress"
         android:paddingLeft="10dp"
         android:paddingTop="3dp"

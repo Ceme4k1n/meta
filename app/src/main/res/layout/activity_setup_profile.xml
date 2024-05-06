@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Session_2.SetupProfile">
+
+    <ImageButton
+        android:id="@+id/adding_avatar_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="126dp"
+        android:background="@drawable/adding_avatar_selector"
+        app:layout_constraintEnd_toStartOf="@+id/imageAvatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/white_theme_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="126dp"
+        android:background="@drawable/white_theme_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toEndOf="@+id/imageAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageAvatar"
+        android:layout_width="151dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/avatar_test"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/editTextFIO"
+        android:layout_width="342dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="Введите ваше ФИО"
+        android:paddingLeft="10dp"
+        android:paddingTop="0dp"
+        android:textColorHint="#80000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageAvatar"
+        tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry,TextFields" />
+
+    <TextView
+        android:id="@+id/textFIO"
+        android:layout_width="31dp"
+        android:layout_height="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="ФИО"
+        android:textColor="#5C636A"
+        app:layout_constraintBottom_toTopOf="@+id/editTextFIO"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFIO"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextFIO"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="342dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="+7 (000) 000 00 00"
+        android:paddingStart="10dp"
+        android:paddingTop="0dp"
+        android:textColorHint="#80000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFIO"
+        tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlSymmetry" />
+
+    <!-- Бля, как же заебало -->
+
+
+    <TextView
+        android:id="@+id/textNumber"
+        android:layout_width="58dp"
+        android:layout_height="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Телефон"
+        android:textColor="#5C636A"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextPhone"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="342dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:hint="Выберите дату"
+        android:inputType="date"
+        android:paddingStart="10dp"
+        android:paddingTop="0dp"
+        android:textColorHint="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="103dp"
+        android:layout_height="17dp"
+        android:layout_marginBottom="8dp"
+        android:text="Дата рождения"
+        android:textColor="#5C636A"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextDate"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="342dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_back"
+        android:backgroundTint="#A7A7A7"
+        android:text="Продолжить"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Бля, как же заебало -->
+
+    <TextView
+        android:id="@+id/textPlatform"
+        android:layout_width="136dp"
+        android:layout_height="17dp"
+        android:layout_marginBottom="8dp"
+        android:text="Источники новостей"
+        android:textColor="#5C636A"
+        app:layout_constraintBottom_toTopOf="@+id/textPlatformBase"
+        app:layout_constraintEnd_toEndOf="@+id/textPlatformBase"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textPlatformBase"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textPlatformBase"
+        android:layout_width="342dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_edittext"
+        android:text="Выберите платформы"
+        android:textColor="@color/black"
+        android:gravity="start|center_vertical"
+        android:paddingStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/plus_button"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/plus_selector"
+        app:layout_constraintEnd_toEndOf="@+id/textPlatformBase"
+        app:layout_constraintTop_toTopOf="@+id/textPlatformBase"
+        tools:ignore="ContentDescription" />
+<!-- Бля, как же заебало -->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

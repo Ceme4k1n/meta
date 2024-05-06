@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние кнопки при нажатии -->
+    <item android:drawable="@drawable/adding_avatar" android:state_pressed="true" />
+
+    <!-- Обычное состояние кнопки -->
+    <item android:drawable="@drawable/adding_avatar" />
+</selector>
