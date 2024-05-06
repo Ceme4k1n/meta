@@ -30,10 +30,26 @@
         android:id="@+id/TimeToCode"
         android:layout_width="230dp"
         android:layout_height="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="48dp"
         android:text="Получить код повторно через 59с"
         android:textColor="@color/black"
         android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/gridLayout"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/gridLayout"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/SandCode"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="48dp"
+        android:text="Получить новый код"
+        android:textColor="#7576D6"
+        android:textSize="14sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/gridLayout"
         app:layout_constraintStart_toStartOf="@+id/gridLayout"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout"
@@ -58,7 +74,7 @@
         android:id="@+id/enterButton"
         android:layout_width="342dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="62dp"
         android:background="@drawable/button_back"
         android:backgroundTint="#A7A7A7"
         android:text="Сбросить пароль"
@@ -73,7 +89,7 @@
         android:id="@+id/createButton"
         android:layout_width="80dp"
         android:layout_height="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="50dp"
         android:background="@android:color/transparent"
         android:text="Вернуться"
@@ -88,7 +104,7 @@
         android:layout_width="170dp"
         android:layout_height="20dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="14dp"
         android:text="Я вспомнил свой пароль!"
         android:textColor="@color/grey"
         android:textSize="14sp"
@@ -100,7 +116,7 @@
         android:id="@+id/gridLayout"
         android:layout_width="366dp"
         android:layout_height="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="58dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -175,14 +191,6 @@
             android:maxLength="1"
             android:textAlignment="center"
             android:textColor="#000000" />
-
-    </androidx.gridlayout.widget.GridLayout>
-
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="409dp"
-        android:layout_height="364dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="272dp">
 
     </androidx.gridlayout.widget.GridLayout>
 
