@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Состояние кнопки при нажатии -->
-    <item android:drawable="@drawable/oko" android:state_pressed="true"/>
-    
+    <item android:drawable="@drawable/home_inative" android:state_pressed="true" />
+
     <!-- Обычное состояние кнопки -->
-    <item android:drawable="@drawable/oko" />
+    <item android:drawable="@drawable/home_inative" />
 </selector>

@@ -161,5 +161,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poloska" />
 
+    <ImageButton
+        android:id="@+id/imageButtonHome"
+        android:layout_width="97dp"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_button_selector" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSearch"
+        android:layout_width="97dp"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonHome"
+        app:srcCompat="@drawable/search_inactive" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
