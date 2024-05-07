@@ -150,20 +150,20 @@
 
     <Button
         android:id="@+id/buttonRed_exit"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="342dp"
         android:layout_height="50dp"
         android:layout_marginTop="350dp"
         android:background="@drawable/round_text_button"
-        android:text="Button"
+        android:text="Выход"
         android:textColor="#CA0000"
-        style="?android:attr/borderlessButtonStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poloska" />
 
     <ImageButton
         android:id="@+id/imageButtonHome"
-        android:layout_width="97dp"
+        android:layout_width="102dp"
         android:layout_height="56dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
@@ -173,7 +173,7 @@
 
     <ImageButton
         android:id="@+id/imageButtonSearch"
-        android:layout_width="97dp"
+        android:layout_width="102dp"
         android:layout_height="56dp"
         android:background="@color/white"
         android:scaleType="centerCrop"
@@ -181,5 +181,24 @@
         app:layout_constraintStart_toEndOf="@+id/imageButtonHome"
         app:srcCompat="@drawable/search_inactive" />
 
+    <ImageButton
+        android:id="@+id/imageButtonFavorite"
+        android:layout_width="102dp"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonSearch"
+        app:srcCompat="@drawable/favorite_inactive" />
+
+    <ImageButton
+        android:id="@+id/imageButtonProfile"
+        android:layout_width="102dp"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonFavorite"
+        app:srcCompat="@drawable/profile_inactive" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

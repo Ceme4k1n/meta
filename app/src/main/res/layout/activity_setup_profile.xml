@@ -195,7 +195,8 @@
         app:layout_constraintEnd_toEndOf="@+id/textPlatformBase"
         app:layout_constraintTop_toTopOf="@+id/textPlatformBase"
         tools:ignore="ContentDescription" />
-<!-- Бля, как же заебало -->
+
+    <!-- Бля, как же заебало -->
 
 
 
