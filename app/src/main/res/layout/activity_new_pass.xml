@@ -158,7 +158,7 @@
         android:background="@android:color/transparent"
         android:text="Вернуться"
         android:textColor="@color/purple"
-        android:textSize="12sp"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="@+id/enterButton"
         app:layout_constraintTop_toBottomOf="@+id/enterButton"
         tools:ignore="HardcodedText,MissingConstraints" />
@@ -171,7 +171,7 @@
         android:layout_marginTop="14dp"
         android:text="Я вспомнил свой пароль!"
         android:textColor="@color/grey"
-        android:textSize="14sp"
+        android:textSize="14dp"
         app:layout_constraintStart_toStartOf="@+id/enterButton"
         app:layout_constraintTop_toBottomOf="@+id/enterButton"
         tools:ignore="MissingConstraints" />
