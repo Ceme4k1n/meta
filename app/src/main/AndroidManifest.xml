@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name="login_database"
+        android:name=".login_database"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".Session_2.Chose_Ptatform_Three"
+            android:exported="false" />
+        <activity
+            android:name=".Session_2.Choose_Platform_Three"
+            android:exported="false" />
         <activity
             android:name=".Session_2.Choose_Platform"
             android:exported="false" />

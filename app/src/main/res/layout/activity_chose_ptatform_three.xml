@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Session_2.Chose_Ptatform_Three">
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="68dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/xxx"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewChoose_Platform"
+        android:layout_width="228dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="59dp"
+        android:text="Выберите платформу"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageViewBubble"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChoose_Platform"
+        app:srcCompat="@drawable/orange_zalupa"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textViewBubbles"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="26dp"
+        android:text="Bubbles"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBubble"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChoose_Platform" />
+
+    <ImageView
+        android:id="@+id/imageViewVK_Parasa"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBubble"
+        app:srcCompat="@drawable/vk_parasha"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textViewVK_Parasa"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="КВ"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewVK_Parasa"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBubbles" />
+
+    <ImageView
+        android:id="@+id/imageViewLOC"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewVK_Parasa"
+        app:srcCompat="@drawable/ll"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textViewLOC"
+        android:layout_width="34dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="КИЛ"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLOC"
+        app:layout_constraintTop_toBottomOf="@+id/textViewVK_Parasa" />
+
+    <ImageButton
+        android:id="@+id/imageButtonGalochka1"
+        android:layout_width="16dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="302dp"
+        android:visibility="invisible"
+        android:layout_marginTop="31dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBubble"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChoose_Platform"
+        app:srcCompat="@drawable/galochka" />
+
+    <ImageButton
+        android:id="@+id/plus_button1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="302dp"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/plus"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBubble"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChoose_Platform"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageButtonGalochka2"
+        android:layout_width="16dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="302dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBubble"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChoose_Platform"
+        app:srcCompat="@drawable/galochka" />
+
+    <ImageButton
+        android:id="@+id/plus_button2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="302dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/plus"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/imageViewVK_Parasa"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChoose_Platform"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageButtonGalochka3"
+        android:layout_width="16dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="302dp"
+        android:layout_marginTop="146dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLOC"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChoose_Platform"
+        app:srcCompat="@drawable/galochka" />
+
+    <ImageButton
+        android:id="@+id/plus_button3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="302dp"
+        android:layout_marginTop="146dp"
+        android:background="@drawable/plus"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLOC"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChoose_Platform"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
