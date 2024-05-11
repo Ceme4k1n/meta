@@ -1,217 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".Session_2.SetupProfile">
+    android:layout_width="match_parent"
+    android:fillViewport="true">
 
-    <ImageButton
-        android:id="@+id/adding_avatar_button"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="126dp"
-        android:background="@drawable/adding_avatar_selector"
-        app:layout_constraintEnd_toStartOf="@+id/imageAvatar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-    <ImageButton
-        android:id="@+id/white_theme_button"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="126dp"
-        android:background="@drawable/white_theme_selector"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toEndOf="@+id/imageAvatar"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/imageAvatar"
-        android:layout_width="151dp"
-        android:layout_height="151dp"
-        android:layout_marginTop="73dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/avatar_test"
-        tools:ignore="ContentDescription" />
-
-    <EditText
-        android:id="@+id/editTextFIO"
-        android:layout_width="342dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/roboto"
-        android:background="@drawable/rounded_edittext"
-        android:ems="10"
-        android:textColor="@color/black"
-        android:hint="Введите ваше ФИО"
-        android:paddingLeft="10dp"
-        android:paddingTop="0dp"
-        android:textColorHint="#80000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageAvatar"
-        tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry,TextFields" />
-
-    <TextView
-        android:id="@+id/textFIO"
-        android:layout_width="31dp"
-        android:layout_height="16dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="ФИО"
-        android:textColor="#5C636A"
-        app:layout_constraintBottom_toTopOf="@+id/editTextFIO"
-        app:layout_constraintEnd_toEndOf="@+id/editTextFIO"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextFIO"
-        tools:ignore="HardcodedText" />
-
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="342dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/roboto"
-        android:background="@drawable/rounded_edittext"
-        android:ems="10"
-        android:textColor="@color/black"
-        android:inputType="phone"
-        android:hint="+7 (000) 000 00 00"
-        android:paddingStart="10dp"
-        android:paddingTop="0dp"
-        android:textColorHint="#80000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFIO"
-        tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlSymmetry" />
-
-    <!-- Бля, как же заебало -->
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".Session_2.SetupProfile">
 
 
-    <TextView
-        android:id="@+id/textNumber"
-        android:layout_width="58dp"
-        android:layout_height="16dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="Телефон"
-        android:textColor="#5C636A"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextPhone"
-        tools:ignore="HardcodedText" />
+        <ImageButton
+            android:id="@+id/adding_avatar_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="126dp"
+            android:background="@drawable/adding_avatar_selector"
+            app:layout_constraintEnd_toStartOf="@+id/imageAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="342dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/roboto"
-        android:background="@drawable/rounded_edittext"
-        android:ems="10"
-        android:hint="Выберите дату"
-        android:textColor="@color/black"
-        android:inputType="date"
-        android:paddingStart="10dp"
-        android:paddingTop="0dp"
-        android:textColorHint="#000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
-        tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlSymmetry" />
+        <ImageButton
+            android:id="@+id/white_theme_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="126dp"
+            android:background="@drawable/white_theme_selector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toEndOf="@+id/imageAvatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/textDate"
-        android:layout_width="103dp"
-        android:layout_height="17dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="Дата рождения"
-        android:textColor="#5C636A"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
-        app:layout_constraintEnd_toEndOf="@+id/editTextDate"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextDate"
-        tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/imageAvatar"
+            android:layout_width="151dp"
+            android:layout_height="151dp"
+            android:layout_marginTop="73dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/avatar_test"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="342dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="@font/roboto"
-        android:background="@drawable/button_back"
-        android:backgroundTint="#A7A7A7"
-        android:text="Продолжить"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/editTextFIO"
+            android:layout_width="342dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="272dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Введите ваше ФИО"
+            android:paddingLeft="10dp"
+            android:paddingTop="0dp"
+            android:textColor="@color/black"
+            android:textColorHint="#80000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry,TextFields,TouchTargetSizeCheck" />
 
-    <!-- Бля, как же заебало -->
+        <TextView
+            android:id="@+id/textFIO"
+            android:layout_width="31dp"
+            android:layout_height="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="ФИО"
+            android:textColor="#5C636A"
+            app:layout_constraintBottom_toTopOf="@+id/editTextFIO"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFIO"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextFIO"
+            tools:ignore="HardcodedText,TextSizeCheck" />
 
-    <TextView
-        android:id="@+id/textPlatform"
-        android:layout_width="136dp"
-        android:layout_height="17dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="Источники новостей"
-        android:textColor="#5C636A"
-        app:layout_constraintBottom_toTopOf="@+id/textPlatformBase"
-        app:layout_constraintEnd_toEndOf="@+id/textPlatformBase"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textPlatformBase"
-        tools:ignore="HardcodedText" />
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="342dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="364dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="+7 (000) 000 00 00"
+            android:inputType="phone"
+            android:paddingStart="10dp"
+            android:paddingTop="0dp"
+            android:textColor="@color/black"
+            android:textColorHint="#80000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlSymmetry,TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/textPlatformBase"
-        android:layout_width="342dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/roboto"
-        android:background="@drawable/rounded_edittext"
-        android:text="Выберите платформы"
-        android:textColor="@color/black"
-        android:gravity="start|center_vertical"
-        android:paddingStart="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/plus_button"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/plus_selector"
-        app:layout_constraintEnd_toEndOf="@+id/textPlatformBase"
-        app:layout_constraintTop_toTopOf="@+id/textPlatformBase"
-        tools:ignore="ContentDescription" />
-
-    <!-- Бля, как же заебало -->
+        <!-- Бля, как же заебало -->
 
 
+        <TextView
+            android:id="@+id/textNumber"
+            android:layout_width="58dp"
+            android:layout_height="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Телефон"
+            android:textColor="#5C636A"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+            app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextPhone"
+            tools:ignore="HardcodedText,TextSizeCheck" />
 
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="342dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="456dp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Выберите дату"
+            android:inputType="date"
+            android:paddingStart="10dp"
+            android:paddingTop="0dp"
+            android:textColor="@color/black"
+            android:textColorHint="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlSymmetry,TouchTargetSizeCheck" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="103dp"
+            android:layout_height="17dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Дата рождения"
+            android:textColor="#5C636A"
+            app:layout_constraintBottom_toTopOf="@+id/editTextDate"
+            app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextDate"
+            tools:ignore="HardcodedText,TextSizeCheck" />
+
+        <!-- Бля, как же заебало -->
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="342dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_back"
+            android:backgroundTint="#A7A7A7"
+            android:fontFamily="@font/roboto"
+            android:text="Продолжить"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPlatformBase"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck,TextContrastCheck,VisualLintButtonSize" />
+
+        <TextView
+            android:id="@+id/textPlatform"
+            android:layout_width="136dp"
+            android:layout_height="17dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Источники новостей"
+            android:textColor="#5C636A"
+            app:layout_constraintBottom_toTopOf="@+id/textPlatformBase"
+            app:layout_constraintEnd_toEndOf="@+id/textPlatformBase"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textPlatformBase"
+            tools:ignore="HardcodedText,TextSizeCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textPlatformBase"
+            android:layout_width="342dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="548dp"
+            android:background="@drawable/rounded_edittext"
+            android:fontFamily="@font/roboto"
+            android:gravity="start|center_vertical"
+            android:paddingStart="8dp"
+            android:text="Выберите платформы"
+
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+
+        <ImageButton
+            android:id="@+id/plus_button"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/plus_selector"
+            app:layout_constraintEnd_toEndOf="@+id/textPlatformBase"
+            app:layout_constraintTop_toTopOf="@+id/textPlatformBase"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <!-- Бля, как же заебало -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
