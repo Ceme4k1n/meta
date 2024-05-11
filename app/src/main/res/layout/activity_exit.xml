@@ -15,6 +15,7 @@
         android:layout_height="42dp"
         android:background="@drawable/button_back"
         android:backgroundTint="#7576D6"
+        android:fontFamily="@font/roboto"
         android:text="Выход"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
