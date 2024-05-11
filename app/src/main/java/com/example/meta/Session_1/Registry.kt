@@ -13,6 +13,7 @@ import com.example.meta.MainActivity
 import com.example.meta.R
 import com.example.meta.Session_2.Choose_Platform
 import com.example.meta.Session_2.Chose_Ptatform_Three
+import com.example.meta.Session_2.SetupProfile
 
 class Registry : AppCompatActivity() {
     @SuppressLint("CommitPrefEdits")
@@ -79,7 +80,7 @@ class Registry : AppCompatActivity() {
         startActivity(intent)
     }
     fun enterSandman(){
-        val intent = Intent(this, Chose_Ptatform_Three::class.java)
+        val intent = Intent(this, SetupProfile::class.java)
         startActivity(intent)
     }
 
