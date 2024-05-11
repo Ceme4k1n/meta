@@ -65,7 +65,7 @@ class Chose_Ptatform_Three : AppCompatActivity() {
         }
 
         Exit_Krest.setOnClickListener {
-            val intent = Intent(this, Choose_Platform::class.java)
+            val intent = Intent(this, SetupProfile::class.java)
             startActivity(intent)
         }
     }
