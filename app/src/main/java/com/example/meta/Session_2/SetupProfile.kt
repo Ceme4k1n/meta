@@ -50,7 +50,7 @@ class SetupProfile : AppCompatActivity() {
         startActivity(intent)
     }
     fun goIn(){
-        val intent = Intent(this, SetupProfile::class.java)
+        val intent = Intent(this, Choose_Platform::class.java)
         startActivity(intent)
     }
     fun selectImageInAlbum() {

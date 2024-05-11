@@ -162,7 +162,7 @@
 
         <!-- Бля, как же заебало -->
 
-        <Button
+            <Button
             android:id="@+id/button"
             android:layout_width="342dp"
             android:layout_height="42dp"
