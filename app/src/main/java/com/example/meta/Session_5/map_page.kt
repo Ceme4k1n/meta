@@ -1,11 +1,15 @@
 package com.example.meta.Session_5
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.meta.MainActivity
 import com.example.meta.R
+import com.example.meta.Session_3.lenta_home_page_text_only
 import com.yandex.mapkit.Animation
 import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.geometry.Point
@@ -20,6 +24,10 @@ class map_page : AppCompatActivity() {
         MapKitFactory.setApiKey("36d76377-ac12-46d8-bdb5-7369b638ba87")
         MapKitFactory.initialize(this)
         setContentView(R.layout.activity_map_page)
+
+
+
+
 
         mapview = findViewById(R.id.map_page_test)
         mapview.map.move(CameraPosition(Point(55.922419, 37.814935), 20.0f, 0.0f, 0.0f),

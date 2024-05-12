@@ -5,30 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Session_5.map_page">
 
 
     <com.yandex.mapkit.mapview.MapView
         android:id="@+id/map_page_test"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_marginTop="90dp"
+        android:layout_height="410dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
     </com.yandex.mapkit.mapview.MapView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="302dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="540dp">
-
-
-
-
-    </LinearLayout>
 
     <ImageButton
         android:id="@+id/imageButtonHome_Active_text_only"
@@ -81,5 +72,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/profile_active"
         tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/one_govno_test"
+                android:layout_width="380dp"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/one_govno" />
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/one_govno" />
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

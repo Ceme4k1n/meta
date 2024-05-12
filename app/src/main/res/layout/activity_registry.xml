@@ -193,8 +193,7 @@
         android:textColor="@color/purple"
         android:textSize="12dp"
         app:layout_constraintStart_toEndOf="@+id/noAcc"
-        app:layout_constraintTop_toBottomOf="@+id/enterButton"
-        tools:ignore="HardcodedText,MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/enterButton" />
 
     <TextView
         android:id="@+id/noAcc"
