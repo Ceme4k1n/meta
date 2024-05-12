@@ -111,7 +111,13 @@ class OTP_Verrif : AppCompatActivity() {
                     _count = 60
                     resend.isVisible = true
                     countdown.isVisible = false
-                    while ()
+                    while (true){
+                        resend.setOnClickListener{
+                            //отправка сообщения
+                            resend.isVisible = false
+                            countdown.isVisible = true
+                        }
+                    }
                 }
                 _count -=1
                 countdown.text = "Получить код повторно через " + _count.toString() + "c."
