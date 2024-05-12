@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.example.meta.Session_1.Registry
+import com.example.meta.Session_5.map_page
 
 class splashScreen : AppCompatActivity() {
 

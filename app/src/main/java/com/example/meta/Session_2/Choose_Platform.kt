@@ -6,6 +6,7 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.meta.R
 import com.example.meta.Session_3.lenta_home_page
+import com.example.meta.Session_5.map_page
 
 class Choose_Platform : AppCompatActivity() {
 
@@ -32,7 +33,7 @@ class Choose_Platform : AppCompatActivity() {
         }
 
         search.setOnClickListener {
-            val intent = Intent(this, Choose_Platform::class.java)
+            val intent = Intent(this, map_page::class.java)
             startActivity(intent)
         }
     }
