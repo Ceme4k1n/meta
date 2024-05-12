@@ -13,6 +13,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
 import com.example.meta.R
 
 class OTP_Verrif : AppCompatActivity() {
@@ -30,6 +31,7 @@ class OTP_Verrif : AppCompatActivity() {
         val countdown : TextView = findViewById(R.id.TimeToCode)
         var _count : Int = 60
         var handler: Handler = Handler()
+        val resend : TextView = findViewById(R.id.SandCode)
         lateinit var editor: SharedPreferences.Editor
 
         DROPDATABASE.setOnClickListener{
@@ -107,7 +109,9 @@ class OTP_Verrif : AppCompatActivity() {
             handler.postDelayed({
                 if(_count == 0){
                     _count = 60
-                    //Как будет кнопка добавить переход
+                    resend.isVisible = true
+                    countdown.isVisible = false
+                    while ()
                 }
                 _count -=1
                 countdown.text = "Получить код повторно через " + _count.toString() + "c."
