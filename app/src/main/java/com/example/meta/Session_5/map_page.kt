@@ -14,26 +14,26 @@ import com.yandex.mapkit.mapview.MapView
 
 class map_page : AppCompatActivity() {
 
-    lateinit var mapView:MapView
+    lateinit var mapview:MapView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         MapKitFactory.setApiKey("36d76377-ac12-46d8-bdb5-7369b638ba87")
         MapKitFactory.initialize(this)
         setContentView(R.layout.activity_map_page)
 
-        mapView = findViewById(R.id.mapview)
-        mapView.map.move(CameraPosition(Point(42.225083, 43.970865), 11.0f, 0.0f, 0.0f))
-        Animation(Animation.Type.SMOOTH, 2000f)
+        mapview = findViewById(R.id.map_page_test)
+        mapview.map.move(CameraPosition(Point(55.922419, 37.814935), 20.0f, 0.0f, 0.0f),
+        Animation(Animation.Type.SMOOTH, 1f), null)
     }
 
     override fun onStop() {
-        mapView.onStop()
+        mapview.onStop()
         MapKitFactory.getInstance().onStop()
         super.onStop()
     }
 
     override fun onStart() {
-        mapView.onStart()
+        mapview.onStart()
         MapKitFactory.getInstance().onStart()
         super.onStart()
     }

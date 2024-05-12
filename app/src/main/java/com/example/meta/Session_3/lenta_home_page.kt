@@ -3,12 +3,9 @@ package com.example.meta.Session_3
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.meta.R
-import com.example.meta.Session_2.SetupProfile
+import com.example.meta.Session_2.Choose_Platform
 
 class lenta_home_page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,11 +13,22 @@ class lenta_home_page : AppCompatActivity() {
         setContentView(R.layout.activity_lenta_home_page)
 
         val card_to_text_only : ImageButton = findViewById(R.id.imageButton_Card_Switch)
+        val search : ImageButton = findViewById(R.id.imageButtonSearch_Inactive)
+        val favor : ImageButton = findViewById(R.id.imageButtonFavorite_Inactive)
+        val profile : ImageButton = findViewById(R.id.imageButtonProfile_Inactive)
 
-
-
-
-
+        profile.setOnClickListener {
+            val intent = Intent(this, Choose_Platform::class.java)
+            startActivity(intent)
+        }
+        favor.setOnClickListener {
+            val intent = Intent(this, Choose_Platform::class.java)
+            startActivity(intent)
+        }
+        search.setOnClickListener {
+            val intent = Intent(this, Choose_Platform::class.java)
+            startActivity(intent)
+        }
         card_to_text_only.setOnClickListener {
             val intent = Intent(this, lenta_home_page_text_only::class.java)
             startActivity(intent)
