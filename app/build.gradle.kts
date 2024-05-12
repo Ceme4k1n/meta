@@ -40,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation ("com.yandex.android:maps.mobile:4.6.1-lite")
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

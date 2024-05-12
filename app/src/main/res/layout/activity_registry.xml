@@ -161,6 +161,8 @@
         android:background="@drawable/button_back"
         android:backgroundTint="#A7A7A7"
         android:text="Войти"
+        android:textSize="16dp"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -170,12 +172,11 @@
 
     <CheckBox
         android:id="@+id/rememberCheck"
-        android:layout_width="22dp"
+        android:layout_width="26dp"
         android:layout_height="22dp"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/rounded_edittext"
+        android:layout_marginTop="17dp"
         android:checked="false"
-        android:text="CheckBox"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@+id/Password"
         app:layout_constraintTop_toBottomOf="@+id/Password" />
 
@@ -183,10 +184,12 @@
         android:id="@+id/createButton"
         android:layout_width="65dp"
         android:layout_height="20dp"
+        android:layout_marginStart="-6dp"
         android:layout_marginTop="14dp"
-        android:fontFamily="@font/roboto"
         android:background="@android:color/transparent"
+        android:fontFamily="@font/roboto"
         android:text="Создать"
+        android:textAllCaps="false"
         android:textColor="@color/purple"
         android:textSize="12dp"
         app:layout_constraintStart_toEndOf="@+id/noAcc"

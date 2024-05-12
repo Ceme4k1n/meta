@@ -148,6 +148,8 @@
         android:background="@drawable/button_back"
         android:backgroundTint="#A7A7A7"
         android:text="Подтвердить"
+        android:textSize="16dp"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -160,11 +162,13 @@
         android:layout_width="80dp"
         android:layout_height="20dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="54dp"
         android:background="@android:color/transparent"
         android:text="Вернуться"
+        android:textAllCaps="false"
         android:textColor="@color/purple"
         android:textSize="12dp"
+
         app:layout_constraintEnd_toEndOf="@+id/enterButton"
         app:layout_constraintTop_toBottomOf="@+id/enterButton"
         tools:ignore="HardcodedText,MissingConstraints" />

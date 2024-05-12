@@ -94,21 +94,19 @@
         app:layout_constraintStart_toStartOf="@+id/poloska"
         app:layout_constraintTop_toBottomOf="@+id/poloska" />
 
-    <Button
-        android:id="@+id/button_profile_redact"
-        android:layout_width="172dp"
-        android:layout_height="22dp"
+
+    <TextView
+        android:id="@+id/textProfile_Redact"
+        android:layout_width="212dp"
+        android:layout_height="20dp"
         android:layout_marginTop="18dp"
-        android:background="@android:color/transparent"
         android:fontFamily="@font/roboto"
-        android:gravity="start|center_vertical"
         android:text="Редактирование профиля"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@color/black"
         android:textSize="14dp"
         app:layout_constraintStart_toStartOf="@+id/poloska"
-        app:layout_constraintTop_toBottomOf="@+id/textSettings" />
+        app:layout_constraintTop_toBottomOf="@+id/textSettings"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textPolyciConf"
@@ -149,19 +147,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textSettings"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/buttonRed_exit"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="352dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="350dp"
-        android:background="@drawable/round_text_button"
-        android:fontFamily="@font/roboto"
-        android:text="Выход"
-        android:textColor="#CA0000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/poloska" />
+
 
     <ImageButton
         android:id="@+id/imageButtonHome1"
@@ -214,5 +200,21 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageButtonFavorite"
         app:srcCompat="@drawable/profile_inactive" />
+
+    <Button
+        android:id="@+id/buttonRed_exit"
+        android:layout_width="352dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="348dp"
+        android:backgroundTintMode="multiply"
+        android:textAllCaps="false"
+        android:background="@drawable/red_button"
+        android:fontFamily="@font/roboto"
+        android:text="Выход"
+        android:textSize="16dp"
+        android:textColor="#CA0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poloska" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
