@@ -14,6 +14,12 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".Session_4.favorite_page"
+            android:exported="false" />
+        <activity
+            android:name=".Session_5.govno.one_govno_page"
+            android:exported="false" />
+        <activity
             android:name=".Session_5.map_page"
             android:exported="false" />
         <activity

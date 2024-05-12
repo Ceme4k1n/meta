@@ -3,23 +3,80 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".Session_5.map_page">
+    tools:context=".Session_4.favorite_page">
 
-
-    <com.yandex.mapkit.mapview.MapView
-        android:id="@+id/map_page_test"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="520dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="772dp"
+        android:layout_marginTop="90dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,UselessLeaf">
 
-    </com.yandex.mapkit.mapview.MapView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/one_dresny_test"
+                android:layout_width="400dp"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerInside"
+                android:background="@color/white"
+                android:src="@drawable/one_dresny" />
+
+            <ImageButton
+                android:id="@+id/two_dresny_test"
+                android:layout_width="400dp"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerInside"
+                android:background="@color/white"
+                android:src="@drawable/two_dresny" />
+
+            <ImageButton
+                android:id="@+id/three_dresny_test"
+                android:layout_width="400dp"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerInside"
+                android:background="@color/white"
+                android:src="@drawable/three_dresny" />
+
+            <ImageButton
+                android:id="@+id/four_dresny_test"
+                android:layout_width="400dp"
+                android:layout_height="240dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerInside"
+                android:background="@color/white"
+                android:src="@drawable/four_dresny" />
+            
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewLenta_Novostey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Избранное"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <ImageButton
         android:id="@+id/imageButtonHome_Active_text_only"
@@ -44,7 +101,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/search_active"
+        app:srcCompat="@drawable/search_inactive"
         tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -57,7 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.669"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/favorite_inactive"
+        app:srcCompat="@drawable/favorite_active"
         tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -72,44 +129,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/profile_active"
         tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck" />
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:rotation="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.89">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/one_govno_test"
-                android:layout_width="380dp"
-                android:layout_height="240dp"
-                android:layout_margin="5dp"
-                android:scaleType="centerCrop"
-                android:background="@color/white"
-                android:src="@drawable/one_govno" />
-
-            <ImageButton
-                android:id="@+id/two_govno_test"
-                android:layout_width="380dp"
-                android:layout_height="240dp"
-                android:layout_margin="5dp"
-                android:scaleType="centerCrop"
-                android:background="@color/white"
-                android:src="@drawable/one_govno" />
-
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
