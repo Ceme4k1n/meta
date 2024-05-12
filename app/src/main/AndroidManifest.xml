@@ -14,16 +14,16 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".Session_3.lenta_page"
+            android:name=".Session_3.lenta_home_page_image_only"
             android:exported="false" />
         <activity
-            android:name=".Session_3.home_page_lenta"
+            android:name=".Session_3.lenta_home_page_text_only"
+            android:exported="false" />
+        <activity
+            android:name=".Session_3.lenta_home_page"
             android:exported="false" />
         <activity
             android:name=".Session_2.Chose_Ptatform_Three"
-            android:exported="false" />
-        <activity
-            android:name=".Session_2.Choose_Platform_Three"
             android:exported="false" />
         <activity
             android:name=".Session_2.Choose_Platform"

@@ -55,7 +55,7 @@
 
         <EditText
             android:id="@+id/editTextFIO"
-            android:layout_width="342dp"
+            android:layout_width="352dp"
             android:layout_height="44dp"
             android:layout_marginTop="272dp"
             android:background="@drawable/rounded_edittext"
@@ -89,7 +89,7 @@
 
         <EditText
             android:id="@+id/editTextPhone"
-            android:layout_width="342dp"
+            android:layout_width="352dp"
             android:layout_height="44dp"
             android:layout_marginTop="364dp"
             android:background="@drawable/rounded_edittext"
@@ -127,7 +127,7 @@
 
         <EditText
             android:id="@+id/editTextDate"
-            android:layout_width="342dp"
+            android:layout_width="352dp"
             android:layout_height="44dp"
             android:layout_marginTop="456dp"
             android:background="@drawable/rounded_edittext"
@@ -162,9 +162,9 @@
 
         <!-- Бля, как же заебало -->
 
-            <Button
+        <Button
             android:id="@+id/button"
-            android:layout_width="342dp"
+            android:layout_width="352dp"
             android:layout_height="42dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/button_back"
@@ -193,7 +193,7 @@
 
         <TextView
             android:id="@+id/textPlatformBase"
-            android:layout_width="342dp"
+            android:layout_width="352dp"
             android:layout_height="44dp"
             android:layout_marginTop="548dp"
             android:background="@drawable/rounded_edittext"

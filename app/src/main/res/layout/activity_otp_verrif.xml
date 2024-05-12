@@ -9,12 +9,10 @@
     tools:context=".Session_1.OTP_Verrif">
 
 
-
     <TextView
         android:id="@+id/Subgreeting"
         android:layout_width="250dp"
         android:layout_height="44dp"
-        android:layout_marginStart="13dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="22dp"
         android:fontFamily="@font/roboto"
@@ -23,7 +21,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Remember_Password"
         app:layout_constraintTop_toBottomOf="@+id/Remember_Password" />
 
 
@@ -62,15 +60,16 @@
         android:id="@+id/Remember_Password"
         android:layout_width="280dp"
         android:layout_height="0dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="56dp"
+        android:layout_marginEnd="111dp"
         android:fontFamily="@font/roboto"
         android:text="Верификация"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Subgreeting"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -135,8 +134,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="25dp"
-            android:fontFamily="@font/roboto"
             android:background="@drawable/verrif_text_background"
+            android:fontFamily="@font/roboto"
             android:inputType="number"
             android:maxLength="1"
             android:textAlignment="center"

@@ -11,7 +11,7 @@
 
     <Button
         android:id="@+id/enterButton"
-        android:layout_width="342dp"
+        android:layout_width="352dp"
         android:layout_height="42dp"
         android:background="@drawable/button_back"
         android:backgroundTint="#7576D6"
