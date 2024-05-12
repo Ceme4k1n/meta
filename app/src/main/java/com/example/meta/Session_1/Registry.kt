@@ -3,6 +3,7 @@ package com.example.meta.Session_1
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.os.Debug
 import android.text.method.PasswordTransformationMethod
 import android.widget.Button
 import android.widget.CheckBox
@@ -36,10 +37,12 @@ class Registry : AppCompatActivity() {
         val mail = sharedPreferences.getString("mail",null)
         val pass = sharedPreferences.getString("pass",null)
 //Доделать
-        if(mail!=null && pass!=null) {
+        if(email.text.isNotEmpty() && password.text.isNotEmpty()) {
+            enterButton.setBackgroundResource(R.color.purple)
             password.text = pass
             email.text = mail
         }
+
 
         toPassword.setOnClickListener{
         goToPassword()
