@@ -108,15 +108,14 @@ class OTP_Verrif : AppCompatActivity() {
         fun bombUkraineCountdown() {
             handler.postDelayed({
                 if(_count == 0){
-                    _count = 60
+
                     resend.isVisible = true
                     countdown.isVisible = false
-                    while (true){
-                        resend.setOnClickListener{
-                            //отправка сообщения
-                            resend.isVisible = false
-                            countdown.isVisible = true
-                        }
+                    resend.setOnClickListener{
+                        //Отправка почты
+                        resend.isVisible = false
+                        countdown.isVisible = true
+                        _count = 60
                     }
                 }
                 _count -=1
