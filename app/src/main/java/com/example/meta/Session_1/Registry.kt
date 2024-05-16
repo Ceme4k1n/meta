@@ -18,8 +18,13 @@ import com.example.meta.R
 import com.example.meta.Session_2.Choose_Platform
 import com.example.meta.Session_2.Chose_Ptatform_Three
 import com.example.meta.Session_2.SetupProfile
+import com.google.firebase.Firebase
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.database
 
 class Registry : AppCompatActivity() {
+
+    val database: DatabaseReference = Firebase.database.reference
     @SuppressLint("CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,40 +50,33 @@ class Registry : AppCompatActivity() {
             password.text = pass
             email.text = mail
         }
-
-        val watcher = object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                try {
-                    if (email.text.isNotEmpty() && password.text.isNotEmpty()) {
-                        enterButton.setBackgroundColor(Color.parseColor("#7576D6"))
-                        enterSandman()
-                    } else {
-                        enterButton.setBackgroundColor(Color.GRAY)
-                    }
-                }catch (e:Exception){
-                    e.printStackTrace()
-                }
-            }
-
-
-            override fun afterTextChanged(s: Editable?) {
-                TODO("Not yet implemented")
-            }
-        }
-        val toCreation1 : Button = findViewById(R.id.createButton)
-        toCreation1.setOnClickListener(){
-            if (email.text.isNotEmpty() && password.text.isNotEmpty()) {
-                enterButton.setBackgroundColor(Color.parseColor("#7576D6"))
-                enterSandman()
-            } else {
-                enterButton.setBackgroundColor(Color.GRAY)
-            }
-        }
+//
+//        val watcher = object : TextWatcher {
+//            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+//            }
+//            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+//                try {
+//                    if (email.text.isNotEmpty() && password.text.isNotEmpty()) {
+//                        enterButton.setBackgroundColor(Color.parseColor("#7576D6"))
+//                        enterSandman()
+//                    } else {
+//                        enterButton.setBackgroundColor(Color.GRAY)
+//                    }
+//                }catch (e:Exception){
+//                    e.printStackTrace()
+//                }
+//            }
+//
+//
+//            override fun afterTextChanged(s: Editable?) {
+//                TODO("Not yet implemented")
+//            }
+//        }
 //        email.addTextChangedListener(watcher)
 //        password.addTextChangedListener(watcher)
         //---------------------------------------------------------------------------
+//        РАБОТАЕТ НА ПОЛОВИНУ! ПРЕДЪЯВИТЬ МОРОЗОВУ!
+
         toPassword.setOnClickListener{
         goToPassword()
         }
@@ -98,8 +96,23 @@ class Registry : AppCompatActivity() {
 
         enterButton.setOnClickListener{
             if(remember.isChecked){
+                //СЮДА БД
                 sharedPreferences.edit().putString("mail",email.text.toString()).apply()
                 sharedPreferences.edit().putString("pass",password.text.toString()).apply()
+                    //НИЖЕ ПОПЫТКА СДЕЛАТЬ АВТОРИЗАЦИЮ. ДЛЯ ПОДРОБНОСТЕЙ ОПУСТИТЕСЬ НИЖЕ!
+//                val database = Firebase.database
+//                val ref = database.getReference("users")
+//
+//                authenticateUser() { isAuthenticated ->
+//                    if (isAuthenticated) {
+//                        // Пользователь успешно аутентифицирован
+//                        // Можно предоставить доступ к защищенным данным
+//                    } else {
+//                        // Не удалось аутентифицировать пользователя
+//                        // Можно обработать это соответствующим образом
+//                    }
+//                }
+                    //СЮДА БД
             }
             if(email.text.isNotEmpty()&& password.text.isNotEmpty()) {
                 enterButton.setBackgroundColor(Color.parseColor("#7576D6"))
@@ -123,7 +136,36 @@ class Registry : AppCompatActivity() {
         val intent = Intent(this, SetupProfile::class.java)
         startActivity(intent)
     }
-
-
+//                   Я ХЗ. МБ Я ПОЛНЫЙ ДАУН, НО ВОТ ФУНКЦИЯ КОТОРУЮ МНЕ ГПТ ПРЕДЛОЖИЛ. Я ПОПЫТАЛСЯ ЕЁ ВЫШЕ ВЫЗВАТЬ - НЕ ПОЛУЧИЛОСЬ. 99 Процентов что просто я еблан полный
+//    fun authenticateUser(email: String, password: String, callback: (Boolean) -> Unit) {
+//        // Получаем ссылку на узел с пользователями в базе данных
+//        val usersRef = database.child("users")
+//
+//        // Проверяем, существует ли пользователь с таким email
+//        usersRef.orderByChild("email").equalTo(email).get().addOnSuccessListener { snapshot ->
+//            if (snapshot.exists()) {
+//                // Получаем данные пользователя из снимка
+//                val user = snapshot.children.first().getValue(User::class.java)
+//
+//                // Проверяем соответствие пароля
+//                if (user?.password == password) {
+//                    // Пользователь аутентифицирован успешно
+//                    callback(true)
+//                } else {
+//                    // Неправильный пароль
+//                    callback(false)
+//                }
+//            } else {
+//                // Пользователь с таким email не найден
+//                callback(false)
+//            }
+//        }.addOnFailureListener {
+//            // Обработка ошибок
+//            callback(false)
+//        }
+//    }
+//
+//    // Класс для представления пользователя
+//    data class User(val email: String, val password: String)
 
 }
