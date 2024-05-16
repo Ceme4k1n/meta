@@ -12,10 +12,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.meta.MainActivity
 import com.example.meta.R
+import com.example.meta.Session_2.SetupProfile
 import com.google.firebase.Firebase
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.database
 
 class Create_Acc : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_acc)
@@ -27,6 +31,8 @@ class Create_Acc : AppCompatActivity() {
         val fckGoBack : Button = findViewById(R.id.createButton)
         val vis1 : ImageButton = findViewById(R.id.visionButton)
         val vis2 : ImageButton = findViewById(R.id.visionButtonRepeat)
+
+
 
 
         vis1.setOnClickListener{
@@ -68,7 +74,8 @@ class Create_Acc : AppCompatActivity() {
         startActivity(intent)
     }
     fun enterSandman(){
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, SetupProfile::class.java)
         startActivity(intent)
     }
+
 }
