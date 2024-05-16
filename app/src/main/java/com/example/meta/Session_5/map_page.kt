@@ -34,8 +34,7 @@ class map_page : AppCompatActivity() {
 
 
         mapview = findViewById(R.id.map_page_test)
-        mapview.map.move(CameraPosition(Point(55.922419, 37.814935), 20.0f, 0.0f, 0.0f),
-        Animation(Animation.Type.SMOOTH, 1f), null)
+
 
 
 
@@ -53,4 +52,6 @@ class map_page : AppCompatActivity() {
         MapKitFactory.getInstance().onStart()
         super.onStart()
     }
+
+
 }

@@ -132,7 +132,8 @@
         android:fontFamily="@font/roboto"
         android:text="Забыли пароль?"
         android:textColor="@color/purple"
-        android:textSize="14dp"
+        android:textSize="14sp"
+        android:textAllCaps="false"
         app:layout_constraintStart_toEndOf="@+id/deda"
         app:layout_constraintTop_toBottomOf="@+id/Password"
         tools:ignore="MissingConstraints" />

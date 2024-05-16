@@ -37,7 +37,7 @@
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toEndOf="@+id/imageAvatar"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
 
         <ImageView
             android:id="@+id/imageAvatar"

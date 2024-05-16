@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.example.meta.Session_1.Create_Acc
 import com.example.meta.Session_1.Registry
 import com.example.meta.Session_5.map_page
 
@@ -17,7 +18,7 @@ class splashScreen : AppCompatActivity() {
         handler = Handler()
         handler.postDelayed({
 
-            var intent = Intent(this, map_page::class.java)
+            var intent = Intent(this, Registry::class.java)
             startActivity(intent)
             finish()
         }, 3000)

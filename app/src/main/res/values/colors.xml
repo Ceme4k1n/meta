@@ -3,6 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#7576D6</color>
-    <color name="grey">#A7A7A7</color>
+    <color name="grey">#FFA7A7A7</color>
+    <color name="colorPrimary">#FFFFFAF0</color>
+    <color name="colorPrimaryDark">#FFFFFAF0</color>
+    <color name="colorAccent">#FF7576D6</color>
+    <color name="darkPrimary">#FFFFFAF0</color>
 
 </resources>

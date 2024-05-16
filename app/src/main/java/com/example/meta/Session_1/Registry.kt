@@ -2,8 +2,11 @@ package com.example.meta.Session_1
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Debug
+import android.text.Editable
+import android.text.TextWatcher
 import android.text.method.PasswordTransformationMethod
 import android.widget.Button
 import android.widget.CheckBox
@@ -43,7 +46,39 @@ class Registry : AppCompatActivity() {
             email.text = mail
         }
 
+        val watcher = object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                try {
+                    if (email.text.isNotEmpty() && password.text.isNotEmpty()) {
+                        enterButton.setBackgroundColor(Color.parseColor("#7576D6"))
+                        enterSandman()
+                    } else {
+                        enterButton.setBackgroundColor(Color.GRAY)
+                    }
+                }catch (e:Exception){
+                    e.printStackTrace()
+                }
+            }
 
+
+            override fun afterTextChanged(s: Editable?) {
+                TODO("Not yet implemented")
+            }
+        }
+        val toCreation1 : Button = findViewById(R.id.createButton)
+        toCreation1.setOnClickListener(){
+            if (email.text.isNotEmpty() && password.text.isNotEmpty()) {
+                enterButton.setBackgroundColor(Color.parseColor("#7576D6"))
+                enterSandman()
+            } else {
+                enterButton.setBackgroundColor(Color.GRAY)
+            }
+        }
+//        email.addTextChangedListener(watcher)
+//        password.addTextChangedListener(watcher)
+        //---------------------------------------------------------------------------
         toPassword.setOnClickListener{
         goToPassword()
         }
@@ -66,9 +101,11 @@ class Registry : AppCompatActivity() {
                 sharedPreferences.edit().putString("mail",email.text.toString()).apply()
                 sharedPreferences.edit().putString("pass",password.text.toString()).apply()
             }
-            if(email.text.isNotEmpty()&& password.text.isNotEmpty()){
-                //Смена цвета доделать
+            if(email.text.isNotEmpty()&& password.text.isNotEmpty()) {
+                enterButton.setBackgroundColor(Color.parseColor("#7576D6"))
                 enterSandman()
+            }else{
+                enterButton.setBackgroundColor(Color.GRAY)
             }
         }
     }

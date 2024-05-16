@@ -2,9 +2,11 @@ package com.example.meta.Session_2
 
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.content.res.Configuration
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
@@ -13,6 +15,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.meta.R
 
 
@@ -37,6 +40,19 @@ class SetupProfile : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
         val next : Button = findViewById(R.id.button)
         val avatar : ImageView = findViewById(R.id.imageAvatar)
 
+        fun changeTheme() {
+            val currentTheme = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+            if (currentTheme == Configuration.UI_MODE_NIGHT_YES) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+
+            }
+        chngStyle.setOnClickListener{
+            changeTheme()
+            recreate()
+        }
 
         val selectImageIntent = registerForActivityResult(ActivityResultContracts.GetContent())
         { uri ->
