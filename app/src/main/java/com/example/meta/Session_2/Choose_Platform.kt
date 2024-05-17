@@ -6,6 +6,7 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.meta.R
 import com.example.meta.Session_3.lenta_home_page
+import com.example.meta.Session_4.favorite_page
 import com.example.meta.Session_5.map_page
 
 class Choose_Platform : AppCompatActivity() {
@@ -16,7 +17,7 @@ class Choose_Platform : AppCompatActivity() {
 
         val home_button: ImageButton = findViewById(R.id.imageButtonHome1)
         val search : ImageButton = findViewById(R.id.imageButtonSearch)
-        val favor : ImageButton = findViewById(R.id.imageButtonFavorite)
+        val favor : ImageButton = findViewById(R.id.imageButtonFavorite_chose_platform)
         val profile : ImageButton = findViewById(R.id.imageButtonProfile)
 
         profile.setOnClickListener {
@@ -24,7 +25,7 @@ class Choose_Platform : AppCompatActivity() {
             startActivity(intent)
         }
         favor.setOnClickListener {
-            val intent = Intent(this, Choose_Platform::class.java)
+            val intent = Intent(this, favorite_page::class.java)
             startActivity(intent)
         }
         home_button.setOnClickListener {

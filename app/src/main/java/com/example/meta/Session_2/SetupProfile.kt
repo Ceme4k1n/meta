@@ -17,7 +17,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.meta.R
-
+import com.google.firebase.Firebase
+import com.google.firebase.database.database
 
 
 class SetupProfile : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
@@ -77,6 +78,12 @@ class SetupProfile : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
             date.text = "${sDay}.${sMonth+1}.${sYear}"
         }
 
+        val database = Firebase.database
+        val ref = database.getReference("users")
+        data class User(val Fio: String?, val phone: String?, val date: String?)
+
+        val user = User(Fio.text.toString(), phone.text.toString(), date.text.toString())
+        ref.push().setValue(user)
 
 
     }

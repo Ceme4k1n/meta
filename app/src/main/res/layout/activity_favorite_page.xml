@@ -11,7 +11,7 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="772dp"
+        android:layout_height="680dp"
         android:layout_marginTop="90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,15 +21,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/one_dresny_test"
                 android:layout_width="400dp"
                 android:layout_height="240dp"
                 android:layout_margin="5dp"
-                android:scaleType="centerInside"
                 android:background="@color/white"
+                android:scaleType="centerInside"
                 android:src="@drawable/one_dresny" />
 
             <ImageButton
@@ -37,8 +37,8 @@
                 android:layout_width="400dp"
                 android:layout_height="240dp"
                 android:layout_margin="5dp"
-                android:scaleType="centerInside"
                 android:background="@color/white"
+                android:scaleType="centerInside"
                 android:src="@drawable/two_dresny" />
 
             <ImageButton
@@ -46,8 +46,8 @@
                 android:layout_width="400dp"
                 android:layout_height="240dp"
                 android:layout_margin="5dp"
-                android:scaleType="centerInside"
                 android:background="@color/white"
+                android:scaleType="centerInside"
                 android:src="@drawable/three_dresny" />
 
             <ImageButton
@@ -55,10 +55,10 @@
                 android:layout_width="400dp"
                 android:layout_height="240dp"
                 android:layout_margin="5dp"
-                android:scaleType="centerInside"
                 android:background="@color/white"
+                android:scaleType="centerInside"
                 android:src="@drawable/four_dresny" />
-            
+
         </LinearLayout>
     </ScrollView>
 
@@ -79,7 +79,7 @@
 
 
     <ImageButton
-        android:id="@+id/imageButtonHome_Active_text_only"
+        android:id="@+id/imageButtonHome_Active_text_only1"
         android:layout_width="96dp"
         android:layout_height="52dp"
         android:background="@color/white"
@@ -92,7 +92,7 @@
         tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButtonSearch_Inactive_text_only"
+        android:id="@+id/imageButtonSearch_Inactive_text_only1"
         android:layout_width="96dp"
         android:layout_height="52dp"
         android:background="@color/white"
@@ -105,7 +105,7 @@
         tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButtonFavorite_Inactive_text_only"
+        android:id="@+id/imageButtonFavorite_Inactive_text_favorite"
         android:layout_width="96dp"
         android:layout_height="52dp"
         android:background="@color/white"
@@ -118,7 +118,7 @@
         tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButtonProfile_Inactive_text_only"
+        android:id="@+id/imageButtonProfile_Inactive_text_only1"
         android:layout_width="96dp"
         android:layout_height="52dp"
         android:background="@color/white"

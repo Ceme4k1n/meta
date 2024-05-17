@@ -1,13 +1,17 @@
 package com.example.meta.Session_1
 
 import android.annotation.SuppressLint
+import android.content.ContentValues
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.graphics.Color
+import android.nfc.Tag
 import android.os.Bundle
 import android.os.Debug
 import android.text.Editable
 import android.text.TextWatcher
 import android.text.method.PasswordTransformationMethod
+import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ImageButton
@@ -19,6 +23,9 @@ import com.example.meta.Session_2.Choose_Platform
 import com.example.meta.Session_2.Chose_Ptatform_Three
 import com.example.meta.Session_2.SetupProfile
 import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.database
 
@@ -37,19 +44,12 @@ class Registry : AppCompatActivity() {
         val toCreation : Button = findViewById(R.id.createButton)
         val enterButton : Button = findViewById(R.id.enterButton)
         val email : TextView = findViewById(R.id.email)
-        val password : TextView = findViewById(R.id.password)
+        val password : TextView = findViewById(R.id.Password)
         val remember : CheckBox = findViewById(R.id.rememberCheck)
         val vision : ImageButton = findViewById(R.id.visionButton)
-        val passwordField : TextView = findViewById(R.id.Password)
-
-        val mail = sharedPreferences.getString("mail",null)
-        val pass = sharedPreferences.getString("pass",null)
+        val boolean1 =false
 //Доделать
-        if(email.text.isNotEmpty() && password.text.isNotEmpty()) {
-            enterButton.setBackgroundResource(R.color.purple)
-            password.text = pass
-            email.text = mail
-        }
+
 //
 //        val watcher = object : TextWatcher {
 //            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -85,44 +85,48 @@ class Registry : AppCompatActivity() {
             goToCreate()
         }
 
-        vision.setOnClickListener{
-            if(passwordField.transformationMethod != null){
-            passwordField.transformationMethod = null
-            }
-            else{
-                passwordField.transformationMethod = PasswordTransformationMethod()
-            }
-        }
 
         enterButton.setOnClickListener{
-            if(remember.isChecked){
-                //СЮДА БД
-                sharedPreferences.edit().putString("mail",email.text.toString()).apply()
-                sharedPreferences.edit().putString("pass",password.text.toString()).apply()
-                    //НИЖЕ ПОПЫТКА СДЕЛАТЬ АВТОРИЗАЦИЮ. ДЛЯ ПОДРОБНОСТЕЙ ОПУСТИТЕСЬ НИЖЕ!
-//                val database = Firebase.database
-//                val ref = database.getReference("users")
-//
-//                authenticateUser() { isAuthenticated ->
-//                    if (isAuthenticated) {
-//                        // Пользователь успешно аутентифицирован
-//                        // Можно предоставить доступ к защищенным данным
-//                    } else {
-//                        // Не удалось аутентифицировать пользователя
-//                        // Можно обработать это соответствующим образом
-//                    }
-//                }
-                    //СЮДА БД
-            }
             if(email.text.isNotEmpty()&& password.text.isNotEmpty()) {
+                print(email)
+                print(password)
+                loginViaEmail(email.text.toString(), password.text.toString())
                 enterButton.setBackgroundColor(Color.parseColor("#7576D6"))
-                enterSandman()
             }else{
                 enterButton.setBackgroundColor(Color.GRAY)
             }
         }
     }
 
+    fun loginViaEmail(
+        email: String,
+        password: String
+    ){
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+            .addOnSuccessListener {
+                Log.d(ContentValues.TAG,"Succecfully singed in")
+                enterSandman()
+            }
+            .addOnFailureListener { exception ->
+                if (exception is FirebaseAuthInvalidUserException) {
+                    // Обработка несуществующего пользователя
+                    println("Пользователь с таким email не существует")
+                    println(email)
+                    println(password)
+                } else if (exception is FirebaseAuthInvalidCredentialsException) {
+
+                    // Обработка неверного пароля
+                    println(email)
+                    println(password)
+                    println("Неверный пароль")
+                } else {
+                    // Обработка других ошибок
+                    println(email)
+                    println(password)
+                    println("Произошла ошибка: ${exception.message}")
+                }
+            }
+    }
 
     fun goToPassword(){
         val intent = Intent(this, Forgot_Pass::class.java)
@@ -133,39 +137,11 @@ class Registry : AppCompatActivity() {
         startActivity(intent)
     }
     fun enterSandman(){
-        val intent = Intent(this, SetupProfile::class.java)
+        val intent = Intent(this, Choose_Platform::class.java)
         startActivity(intent)
     }
-//                   Я ХЗ. МБ Я ПОЛНЫЙ ДАУН, НО ВОТ ФУНКЦИЯ КОТОРУЮ МНЕ ГПТ ПРЕДЛОЖИЛ. Я ПОПЫТАЛСЯ ЕЁ ВЫШЕ ВЫЗВАТЬ - НЕ ПОЛУЧИЛОСЬ. 99 Процентов что просто я еблан полный
-//    fun authenticateUser(email: String, password: String, callback: (Boolean) -> Unit) {
-//        // Получаем ссылку на узел с пользователями в базе данных
-//        val usersRef = database.child("users")
-//
-//        // Проверяем, существует ли пользователь с таким email
-//        usersRef.orderByChild("email").equalTo(email).get().addOnSuccessListener { snapshot ->
-//            if (snapshot.exists()) {
-//                // Получаем данные пользователя из снимка
-//                val user = snapshot.children.first().getValue(User::class.java)
-//
-//                // Проверяем соответствие пароля
-//                if (user?.password == password) {
-//                    // Пользователь аутентифицирован успешно
-//                    callback(true)
-//                } else {
-//                    // Неправильный пароль
-//                    callback(false)
-//                }
-//            } else {
-//                // Пользователь с таким email не найден
-//                callback(false)
-//            }
-//        }.addOnFailureListener {
-//            // Обработка ошибок
-//            callback(false)
-//        }
-//    }
-//
-//    // Класс для представления пользователя
-//    data class User(val email: String, val password: String)
+
+
+
 
 }

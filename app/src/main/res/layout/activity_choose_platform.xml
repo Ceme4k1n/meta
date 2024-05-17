@@ -176,7 +176,7 @@
         app:srcCompat="@drawable/search_inactive" />
 
     <ImageButton
-        android:id="@+id/imageButtonFavorite"
+        android:id="@+id/imageButtonFavorite_chose_platform"
         android:layout_width="102dp"
         android:layout_height="56dp"
         android:background="@color/white"
@@ -198,7 +198,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButtonFavorite"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonFavorite_chose_platform"
         app:srcCompat="@drawable/profile_inactive" />
 
     <Button

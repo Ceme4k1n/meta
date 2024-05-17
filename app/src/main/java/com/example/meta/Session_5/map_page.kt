@@ -31,9 +31,23 @@ class map_page : AppCompatActivity() {
         MapKitFactory.setApiKey("36d76377-ac12-46d8-bdb5-7369b638ba87")
         MapKitFactory.initialize(this)
         setContentView(R.layout.activity_map_page)
-
-
         mapview = findViewById(R.id.map_page_test)
+        val home_button: ImageButton = findViewById(R.id.imageButtonHome_map)
+        val favor : ImageButton = findViewById(R.id.imageButtonFavorite_map)
+        val profile : ImageButton = findViewById(R.id.imageButtonProfile_map)
+
+        profile.setOnClickListener {
+            val intent = Intent(this, Choose_Platform::class.java)
+            startActivity(intent)
+        }
+        favor.setOnClickListener {
+            val intent = Intent(this, favorite_page::class.java)
+            startActivity(intent)
+        }
+        home_button.setOnClickListener {
+            val intent = Intent(this, lenta_home_page::class.java)
+            startActivity(intent)
+        }
 
 
 

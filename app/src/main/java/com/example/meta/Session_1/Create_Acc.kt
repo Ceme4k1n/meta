@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.meta.MainActivity
 import com.example.meta.R
 import com.example.meta.Session_2.SetupProfile
+import com.example.meta.regViaEmail
 import com.google.firebase.Firebase
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.database
@@ -56,12 +57,7 @@ class Create_Acc : AppCompatActivity() {
             if(mail.text.isNotEmpty()&&pass1.text.isNotEmpty()&&pass2.text.toString()==pass1.text.toString()){
                 enterSandman()
             }
-            val database = Firebase.database
-            val ref = database.getReference("users")
-            data class User(val email: String?, val password: String?)
-
-            val user = User(mail.text.toString(), pass1.text.toString())
-            ref.push().setValue(user)
+            regViaEmail(mail.text.toString(), pass1.text.toString())
         }
 
         fckGoBack.setOnClickListener{

@@ -6,6 +6,8 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.meta.R
 import com.example.meta.Session_2.Choose_Platform
+import com.example.meta.Session_4.favorite_page
+import com.example.meta.Session_5.map_page
 
 class lenta_home_page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,11 +24,11 @@ class lenta_home_page : AppCompatActivity() {
             startActivity(intent)
         }
         favor.setOnClickListener {
-            val intent = Intent(this, Choose_Platform::class.java)
+            val intent = Intent(this, favorite_page::class.java)
             startActivity(intent)
         }
         search.setOnClickListener {
-            val intent = Intent(this, Choose_Platform::class.java)
+            val intent = Intent(this, map_page::class.java)
             startActivity(intent)
         }
         card_to_text_only.setOnClickListener {
